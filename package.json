@@ -7,7 +7,7 @@
   "scripts": {
     "start": "parcel",
     "build": "parcel build",
-    "build-gh": "parcel build --public-url ''https://aswain03.github.io/digitalmariner-portfolio'",
+    "build-gh": "parcel build --public-url 'https://aswain03.github.io/digitalmariner-portfolio'",
     "predeploy": "npm run build-gh",
     "deploy": "gh-pages -d dist"
   },
