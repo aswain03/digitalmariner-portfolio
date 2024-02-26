@@ -4,39 +4,39 @@
  * Space for you to describe more about yourself.
  */
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 /**
  * About background image
  *
  * Below is a sample image. Upload the image of your choice into the "images"
- * directory and import here for use. Then, set imageAltText to string that 
+ * directory and import here for use. Then, set imageAltText to string that
  * represents what you see in that image.
  *
  * Need an image? Check out https://unsplash.com to download a image you
  * freely use on your site.
  */
-import image from "../images/motion-background.jpg";
+import image from "../images/sunset-pixel-scenery-mountain.jpg";
 
-const imageAltText = "purple and blue abstract background";
+const imageAltText = "Pixel art of a sunset over a mountain range.";
 
 /**
  * Sort description that expands on your title on the Home component.
  */
 const description =
-  "I'm a UI/UX student studying at Barnett Technical University. I enjoy creating unique and simplistic user interfaces in creative ways.";
+  "I'm a Full stack engineer. Former Leading Hand in the Royal Navy. Studying Computer Science part time with the Open University. Data Engineer at Northcoders.";
 
 /**
  * List of some of skills or technologies you work on, are learning,
  * passionate about, or enjoy,
  */
 const skillsList = [
-  "Web design",
-  "User experience",
-  "Inclusive design",
-  "Focus group testing",
-  "Mobile user interfaces",
-  "Graphic design",
+  "Python",
+  "Cloud computing",
+  "Data engineering",
+  "Backend development",
+  "Test driven development",
+  "Game development",
 ];
 
 /**
@@ -45,9 +45,22 @@ const skillsList = [
  * about you on a professional level.
  */
 const detailOrQuote =
-  "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my UI/UX experience I continually look for new and better ways to make tech accessible by all.";
+  "I am passionate about solving problems, incredibly curious and a strong believer in the power of the community, I am always looking to give back. Coding. Hiking. Cooking. Gardening. Modest. Moustache.";
 
 const About = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <section className="padding" id="about">
       <img className="background" src={image} alt={imageAltText} />
@@ -66,7 +79,7 @@ const About = () => {
         <ul
           style={{
             textAlign: "left",
-            columns: 2,
+            columns: windowWidth <= 800 ? 1 : 2,
             fontSize: "1.25rem",
             margin: "2rem 3rem",
             gap: "3rem",

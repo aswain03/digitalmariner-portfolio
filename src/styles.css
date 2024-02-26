@@ -36,7 +36,7 @@ section.padding {
 section img.background {
   height: 100%;
   left: 50%;
-  object-fit: cover;
+  object-fit:cover;
   pointer-events: none;
   position: absolute;
   top: 0;
@@ -44,10 +44,17 @@ section img.background {
   width: 100vmax;
   z-index: -1;
 }
+@media screen and (max-width: 600px) {
+  section img.background {
+    right: 0;
+    left: auto;
+    transform: translate(0, 0);
+  }
+}
 
 h1 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 7rem;
+  font-size: 5rem;
   font-weight: 400;
   line-height: 0.8;
   margin: 0;
@@ -107,6 +114,12 @@ a:hover {
   grid-gap: 20px;
   grid-template-columns: 330px 300px;
   margin: 20px auto;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
 }
 
 .container .box {
