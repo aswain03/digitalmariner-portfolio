@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "Educator JS Codespace Template",
   "source": "src/index.html",
-  "homepage": "http://aswain03.github.io/digitalmariner-portfolio",
+  "homepage": "http://{github-username}.github.io/{repo-name}",
   "scripts": {
     "start": "parcel",
     "build": "parcel build",
-    "build-gh": "parcel build --public-url 'https://aswain03.github.io/digitalmariner-portfolio'",
+    "build-gh": "parcel build --public-url 'https://{github-username}.github.io/{repo-name}'",
     "predeploy": "npm run build-gh",
     "deploy": "gh-pages -d dist"
   },
