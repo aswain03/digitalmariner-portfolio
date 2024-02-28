@@ -37,6 +37,12 @@ const projectList = [
     url: "https://github.com/aswain03/be-nc-news",
   },
   {
+    title: "Is it online? 🌐",
+    description:
+      "A simple terminal app built with python using the requests library. This app checks if a website is online.",
+    url: "https://github.com/aswain03/is_it_online",
+  },
+  {
     title: "Remember Paint? 🎨",
     description:
       "Simple Paint app recreated using c# and winforms. This was a fun project to work on and I learned a lot about the basics of GUI development.",
