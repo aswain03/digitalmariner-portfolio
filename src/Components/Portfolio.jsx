@@ -4,7 +4,6 @@ import image from "../images/pixel_ship.jpg";
 
 const imageAltText = "Pixel art of a wooden ship on the sea.";
 
-
 const projectList = [
   {
     title: "Backend fake news project 📰",
@@ -35,11 +34,6 @@ const projectList = [
     description:
       "First game I built using Unity. This was a great to learn the basics of game development and C#.",
     url: "https://digitalmariner.itch.io/snowrider-v1",
-  },
-  {
-    title: "This website! 💻",
-    description: "Constantly being updated and improved! Built using React and hosted on Azure.",
-    url: "https://github.com/aswain03/digitalmariner-portfolio",
   },
 ];
 
